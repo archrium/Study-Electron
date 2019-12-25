@@ -2,7 +2,7 @@ const electron = require("electron");
 const url = require("url");
 const path = require("path");
 
-const { app, BrowserWindow, Menu } = electron;
+const { app, BrowserWindow, Menu, ipcMain } = electron;
 
 let mainWindow;
 
@@ -10,7 +10,11 @@ app.on('ready', () =>
 {
 
     // ==== Instantiation
-    mainWindow = new BrowserWindow({});
+    mainWindow = new BrowserWindow({
+        webPreferences: {
+            nodeIntegration: true
+        }
+    });
 
     // >> Create main window
     mainWindow.loadURL(
@@ -21,15 +25,19 @@ app.on('ready', () =>
         })
     );
 
-    console.log(process.platform);
-
     // ==== Create menu
     const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
     Menu.setApplicationMenu(mainMenu);
 
+    //
+    ipcMain.on("key:inputValue", (err, data) => {
+        console.log(data);
+    })
+
 
 });
 
+// >> content of the menu
 const mainMenuTemplate = [
     {
         label: "File",

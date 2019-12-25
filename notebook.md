@@ -1,6 +1,9 @@
 # Where I left
+electron todopp besinci video
+https://youtu.be/ajvnYsKSXyc?list=PL_f2F0Oyaj48jgl98pHuoyxoTgi7gXJ-z
 
 # Todo
+- openCss adinda bir template cikarabilirsin 
 
 # Problems
 

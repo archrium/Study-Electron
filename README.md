@@ -10,6 +10,8 @@ Study repository for electron framework
 - npm init
 - npm install --save electron
 
+# Libraries
+- Bootstrap
+
 # Linking
 
-# Assume Unchanged
