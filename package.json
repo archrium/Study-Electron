@@ -1,0 +1,26 @@
+{
+  "name": "vision",
+  "version": "1.0.0",
+  "description": "Experimental Applicatioon",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Orthrin/Study-Todo-Electron.git"
+  },
+  "keywords": [
+    "external-memory"
+  ],
+  "author": "orthrin",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Orthrin/Study-Todo-Electron/issues"
+  },
+  "homepage": "https://github.com/Orthrin/Study-Todo-Electron#readme",
+  "dependencies": {
+    "electron": "^7.1.7"
+  }
+}
