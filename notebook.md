@@ -1,6 +1,5 @@
 # Where I left
-electron todopp besinci video
-https://youtu.be/ajvnYsKSXyc?list=PL_f2F0Oyaj48jgl98pHuoyxoTgi7gXJ-z
+https://youtu.be/R5ko63ESbm8?list=PL_f2F0Oyaj48jgl98pHuoyxoTgi7gXJ-z
 
 # Todo
 - openCss adinda bir template cikarabilirsin 
@@ -12,7 +11,9 @@ https://youtu.be/ajvnYsKSXyc?list=PL_f2F0Oyaj48jgl98pHuoyxoTgi7gXJ-z
 >> Comment Nomenclature
 - <prefix> ==== Title
 - <prefix> >> Function What is it doing
+- <prefix> !! Handle
 - <prefix> General Purpose Comment
+
 
 >> Source
 Kablosuz kedi masaustu uyguulama yapimi

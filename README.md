@@ -13,8 +13,13 @@ Study repository for electron framework
 # Libraries
 - Bootstrap
 - Pure.css
+- Primer.css
 
 # Linking
 Pure.css Library
 https://purecss.io/
+Bootstrap
+https://getbootstrap.com/
+Primer
+https://primer.style/css/getting-started
 

@@ -30,10 +30,20 @@ app.on('ready', () =>
     Menu.setApplicationMenu(mainMenu);
 
     //
-    ipcMain.on("key:inputValue", (err, data) => {
+    ipcMain.on("key:inputValue", (err, data) =>
+    {
         console.log(data);
     })
 
+    // >> New Window
+    ipcMain.on("key:newFrame", (err) =>
+    {
+        createFrame();
+    })
+
+    mainWindow.on("close", () =>{
+        app.quit();
+    })
 
 });
 
@@ -75,5 +85,24 @@ if (process.env.NODE_ENV !== "production")
         {
             focusedWindow.toggleDevTools();
         }
+    })
+}
+
+function createFrame()
+{
+    addWindow = new BrowserWindow({
+        width: 482,
+        height: 200,
+        title: "New Frame"
+    });
+
+    addWindow.loadURL(url.format({
+        pathname: path.join(__dirname,"test.html"),
+        protocol: "file:",
+        slashes: true
+    }));
+
+    addWindow.on("close", ()=> {
+        addWindow = null;
     })
 }
