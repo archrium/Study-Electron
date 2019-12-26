@@ -6,6 +6,7 @@ https://youtu.be/ajvnYsKSXyc?list=PL_f2F0Oyaj48jgl98pHuoyxoTgi7gXJ-z
 - openCss adinda bir template cikarabilirsin 
 
 # Problems
+- insecure content-security-policy ts 179 bi ara coz
 
 # Reminders
 >> Comment Nomenclature

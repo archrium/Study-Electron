@@ -12,6 +12,9 @@ Study repository for electron framework
 
 # Libraries
 - Bootstrap
+- Pure.css
 
 # Linking
+Pure.css Library
+https://purecss.io/
 
