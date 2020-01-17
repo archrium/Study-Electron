@@ -1,0 +1,18 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "study todo app",
+  "main": "main.js",
+  "scripts": {
+    "test": "test",
+    "start": "electron ."
+  },
+  "keywords": [
+    "todo"
+  ],
+  "author": "Orthrin",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "electron": "^7.1.9"
+  }
+}
