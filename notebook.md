@@ -1,5 +1,6 @@
 # Where I left
-https://www.youtube.com/watch?v=Mo5onI7BvWk&list=PL_f2F0Oyaj48jgl98pHuoyxoTgi7gXJ-z&index=7
+https://www.youtube.com/watch?v=UjzedQB5_BE&list=PL_f2F0Oyaj48jgl98pHuoyxoTgi7gXJ-z&index=8
+nodemon --watch * --exec "electron ."
 
 # Todo
 - openCss adinda bir template cikarabilirsin 
@@ -8,6 +9,9 @@ https://www.youtube.com/watch?v=Mo5onI7BvWk&list=PL_f2F0Oyaj48jgl98pHuoyxoTgi7gX
 - insecure content-security-policy ts 179 bi ara coz
 
 # Reminders
+- frontend to backend >> `ipcRenderer`
+- backend to frontend >> `webContents`
+
 >> Comment Nomenclature
 - <prefix> ==== Title
 - <prefix> >> Function What is it doing

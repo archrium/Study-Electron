@@ -16,12 +16,30 @@
         <div class="card shadow pt-2 pb-2" style="width: 30rem;">
             <div class="card-body">
                 <h4 class="card-title">Edit Todo</h4>
-                <input type="text" class="form-control mt-3 mb-3" value="Degisecek olan deger" />
-                <a href="#" class="card-link btn btn-sm btn-outline-warning">Update</a>
-                <a href="#" class="card-link btn btn-sm btn-outline-danger">Cancel</a>
+                <input type="text" class="form-control mt-3 mb-3" value="Degisecek olan deger" id="todoContent"/>
+                <a href="#" class="card-link btn btn-sm btn-outline-warning" id="btnCreate">Create Todo</a>
+                <a href="#" class="card-link btn btn-sm btn-outline-danger" id="btnClose">Cancel</a>
             </div>
         </div>
     </div>
+
+    <script>
+
+        const { ipcRenderer } = require('electron');
+
+        let todoContent = document.querySelector('#todoContent');
+
+        document.querySelector('#btnCreate').addEventListener('click', () =>
+        {
+            ipcRenderer.send('newTodo:btnCreate', todoContent.value); 
+        });
+
+        document.querySelector('#btnClose').addEventListener('click', () =>
+        {
+            ipcRenderer.send('newTodo:btnClose'); 
+        });
+
+    </script>
 
 </body>
 
