@@ -1,6 +1,5 @@
 # Where I left
-https://youtu.be/R5ko63ESbm8?list=PL_f2F0Oyaj48jgl98pHuoyxoTgi7gXJ-z&t=501
-Click ekleme
+https://www.youtube.com/watch?v=Mo5onI7BvWk&list=PL_f2F0Oyaj48jgl98pHuoyxoTgi7gXJ-z&index=7
 
 # Todo
 - openCss adinda bir template cikarabilirsin 

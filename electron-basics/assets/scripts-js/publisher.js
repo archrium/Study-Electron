@@ -12,5 +12,5 @@ sendBtn.addEventListener("click", () =>
 
 openNew.addEventListener("click", () =>
 {
-    ipcRenderer.send("key:newFrame");
+    ipcRenderer.send("key:newFrame"); 
 });

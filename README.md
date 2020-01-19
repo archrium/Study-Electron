@@ -3,12 +3,13 @@
 Study repository for electron framework
 
 # Initialization
-- npm start
+- cd <projectdir> > npm start
 
 # Install 
 - Visual Studio Code [Text Editor]
 - npm init
 - npm install --save electron
+npm install --save-dev nodemon ## if npm global not working             `# Development Ease of use`  
 
 # Libraries
 - Bootstrap

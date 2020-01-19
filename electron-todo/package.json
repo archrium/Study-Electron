@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "test": "test",
-    "start": "electron ."
+    "start": "electron .",
+    "nodemon": "nodemon electron ."
   },
   "keywords": [
     "todo"
@@ -14,5 +15,9 @@
   "license": "GPL-3.0-or-later",
   "dependencies": {
     "electron": "^7.1.9"
-  }
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "dev": "nodemon --watch . --exec \"electron . --debug\""
 }

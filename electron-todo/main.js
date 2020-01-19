@@ -53,7 +53,10 @@ const mainMenuTemplate = [
         label: "File",
         submenu: [
             {
-                label: "Add"
+                label: "Add",
+                click(){
+                    createFrame();
+                }
             },
             {
                 label: "Delete"
@@ -91,13 +94,13 @@ if (process.env.NODE_ENV !== "production")
 function createFrame()
 {
     addWindow = new BrowserWindow({
-        width: 482,
-        height: 200,
+        width: 560,
+        height: 250,
         title: "New Frame"
     });
 
     addWindow.loadURL(url.format({
-        pathname: path.join(__dirname,"test.html"),
+        pathname: path.join(__dirname,"assets/view-html/newTodo.html"),
         protocol: "file:",
         slashes: true
     }));
