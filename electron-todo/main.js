@@ -52,7 +52,7 @@ app.on('ready', () =>
                 content: data
             });
         }
-        console.log(todoList);
+        mainWindow.webContents.send("main:addItem", todoList);
         addWindow.close();
         addWindow = null;
     });
