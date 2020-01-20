@@ -1,6 +1,7 @@
 const electron = require("electron");
 const url = require("url");
 const path = require("path");
+// const { db } = require('./lib/connection');
 
 const { app, BrowserWindow, Menu, ipcMain } = electron;
 
@@ -54,9 +55,10 @@ app.on('ready', () =>
             todoList.push(todo);
         }
         mainWindow.webContents.send("main:addItem", todo);
-        if(data.ref == "other"){
-        addWindow.close();
-        addWindow = null;
+        if (data.ref == "other")
+        {
+            addWindow.close();
+            addWindow = null;
         }
     });
 

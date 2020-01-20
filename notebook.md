@@ -4,6 +4,7 @@ nodemon --watch * --exec "electron ."
 
 # Todo
 - openCss adinda bir template cikarabilirsin 
+- vsc formatlamaya bak
 
 # Problems
 - insecure content-security-policy ts 179 bi ara coz
