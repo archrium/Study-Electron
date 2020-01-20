@@ -5,6 +5,11 @@ nodemon --watch * --exec "electron ."
 # Todo
 - openCss adinda bir template cikarabilirsin 
 - vsc formatlamaya bak
+- npm i --save knex
+- npm i --save sqlite3
+- npm i --save-dev electron-rebuild
+- npm rebuild
+- Download db browser
 
 # Problems
 - insecure content-security-policy ts 179 bi ara coz
@@ -21,8 +26,10 @@ nodemon --watch * --exec "electron ."
 - <prefix> General Purpose Comment
 
 >> Source
-Kablosuz kedi masaustu uyguulama yapimi
+[1] Kablosuz kedi masaustu uyguulama yapimi
 https://www.youtube.com/watch?v=qsM9ylyt7xw&list=PL_f2F0Oyaj48jgl98pHuoyxoTgi7gXJ-z
+[2] tarik guney developing electron sqlite3
+https://www.youtube.com/watch?v=c76FTxLRwAw
 
 >> Links
 electron security
