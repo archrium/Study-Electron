@@ -1,5 +1,5 @@
 # Where I left
-https://www.youtube.com/watch?v=UjzedQB5_BE&list=PL_f2F0Oyaj48jgl98pHuoyxoTgi7gXJ-z&index=8
+https://youtu.be/Q9RyoNi4UXI?list=PL_f2F0Oyaj48jgl98pHuoyxoTgi7gXJ-z
 nodemon --watch * --exec "electron ."
 
 # Todo
@@ -8,9 +8,9 @@ nodemon --watch * --exec "electron ."
 # Problems
 - insecure content-security-policy ts 179 bi ara coz
 
+# Completed
+
 # Reminders
-- frontend to backend >> `ipcRenderer`
-- backend to frontend >> `webContents`
 
 >> Comment Nomenclature
 - <prefix> ==== Title
@@ -18,14 +18,19 @@ nodemon --watch * --exec "electron ."
 - <prefix> !! Handle
 - <prefix> General Purpose Comment
 
-
 >> Source
 Kablosuz kedi masaustu uyguulama yapimi
 https://www.youtube.com/watch?v=qsM9ylyt7xw&list=PL_f2F0Oyaj48jgl98pHuoyxoTgi7gXJ-z
 
+>> Links
+electron security
+https://github.com/electron/electron/blob/master/docs/tutorial/security.md
+
 >> Javascript
 `console.log(process.platform)` platform bilgisi
 
->> Assume Unchanged
+>> Electron
+`ipcRenderer` frontend to backend  
+`webContents` backend to frontend   
 
-# Completed
+>> Assume Unchanged

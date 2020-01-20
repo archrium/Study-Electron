@@ -47,12 +47,13 @@ app.on('ready', () =>
     {
         if (data)
         {
-            todoList.push({
+            var todo = {
                 id: todoList.length + 1,
                 content: data
-            });
+            }
+            todoList.push(todo);
         }
-        mainWindow.webContents.send("main:addItem", todoList);
+        mainWindow.webContents.send("main:addItem", todo);
         addWindow.close();
         addWindow = null;
     });
