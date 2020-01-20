@@ -1,6 +1,14 @@
 const { ipcRenderer } = require('electron');
 
-nihilList();
+checkTodoCount();
+
+const inputNewTodo = document.querySelector("#inputNewTodo");
+
+document.querySelector("#btnNewTodo").addEventListener('click', () =>
+{
+    ipcRenderer.send('g:newTodo', { ref: "main", todoValue: inputNewTodo.value });
+    inputNewTodo.value = "";
+})
 
 ipcRenderer.on('main:addItem', (err, todoItems) =>
 {
@@ -26,11 +34,12 @@ ipcRenderer.on('main:addItem', (err, todoItems) =>
     btnDelete.className = "btn btn-sm btn-outline-danger flex-shrink-1";
     btnDelete.innerText = "X"; //&#x2715;
 
-    btnDelete.addEventListener('click', () =>
+    btnDelete.addEventListener('click', (element) =>
     {
         if (confirm("Do you confirm to delete?"))
         {
-            // Todo
+            element.target.parentNode.parentNode.remove();
+            checkTodoCount();
         }
     });
 
@@ -39,18 +48,21 @@ ipcRenderer.on('main:addItem', (err, todoItems) =>
     col.appendChild(btnDelete);
     row.appendChild(col);
     container.appendChild(row);
-    nihilList();
+    checkTodoCount();
 });
 
-function nihilList () {
+function checkTodoCount()
+{
 
     let container = document.querySelector(".todo-container");
     let nihil = document.querySelector('.nihil');
 
-    if(container.children.length > 1) {
+    if (container.children.length > 1)
+    {
         console.log(container.children.length);
         nihil.style.display = "none";
-    } else {
+    } else
+    {
         nihil.style.display = "block";
     }
 

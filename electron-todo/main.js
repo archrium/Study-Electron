@@ -19,7 +19,7 @@ app.on('ready', () =>
     // ==== Create main window
     mainWindow.loadURL(
         url.format({
-            pathname: path.join(__dirname, "assets/view-html/main.html"),
+            pathname: path.join(__dirname, "assets/view-html/index.html"),
             protocol: "file:",
             slashes: true
         })
@@ -43,19 +43,21 @@ app.on('ready', () =>
     });
 
     // >> Yeni pencere kapat
-    ipcMain.on("newTodo:btnCreate", (err, data) =>
+    ipcMain.on("g:newTodo", (err, data) =>
     {
         if (data)
         {
             var todo = {
                 id: todoList.length + 1,
-                content: data
+                content: data.todoValue
             }
             todoList.push(todo);
         }
         mainWindow.webContents.send("main:addItem", todo);
+        if(data.ref == "other"){
         addWindow.close();
         addWindow = null;
+        }
     });
 
     ipcMain.on("newTodo:btnClose", () =>

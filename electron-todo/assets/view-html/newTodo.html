@@ -16,7 +16,7 @@
         <div class="card shadow pt-2 pb-2" style="width: 30rem;">
             <div class="card-body">
                 <h4 class="card-title">Edit Todo</h4>
-                <input type="text" class="form-control mt-3 mb-3" value="Degisecek olan deger" id="todoContent"/>
+                <input type="text" class="form-control mt-3 mb-3" placeholder="enter a new todo" id="todoContent"/>
                 <a href="#" class="card-link btn btn-sm btn-outline-warning" id="btnCreate">Create Todo</a>
                 <a href="#" class="card-link btn btn-sm btn-outline-danger" id="btnClose">Cancel</a>
             </div>
@@ -31,7 +31,7 @@
 
         document.querySelector('#btnCreate').addEventListener('click', () =>
         {
-            ipcRenderer.send('newTodo:btnCreate', todoContent.value); 
+            ipcRenderer.send('g:newTodo', {ref : "other", todoValue : todoContent.value}); 
         });
 
         document.querySelector('#btnClose').addEventListener('click', () =>
