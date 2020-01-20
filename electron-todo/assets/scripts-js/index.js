@@ -4,11 +4,18 @@ checkTodoCount();
 
 const inputNewTodo = document.querySelector("#inputNewTodo");
 
+inputNewTodo.addEventListener('keypress', (key) =>
+{
+    if (key.keyCode == 13)
+    {
+        addTodo();
+    }
+});
+
 document.querySelector("#btnNewTodo").addEventListener('click', () =>
 {
-    ipcRenderer.send('g:newTodo', { ref: "main", todoValue: inputNewTodo.value });
-    inputNewTodo.value = "";
-})
+    addTodo();
+});
 
 ipcRenderer.on('main:addItem', (err, todoItems) =>
 {
@@ -51,6 +58,8 @@ ipcRenderer.on('main:addItem', (err, todoItems) =>
     checkTodoCount();
 });
 
+
+// ==== Command Functions
 function checkTodoCount()
 {
 
@@ -66,4 +75,13 @@ function checkTodoCount()
         nihil.style.display = "block";
     }
 
+}
+
+function addTodo() 
+{
+    if (inputNewTodo.value.length > 0)
+    {
+        ipcRenderer.send('g:newTodo', { ref: "main", todoValue: inputNewTodo.value });
+        inputNewTodo.value = "";
+    }
 }

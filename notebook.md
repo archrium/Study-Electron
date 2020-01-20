@@ -11,6 +11,7 @@ nodemon --watch * --exec "electron ."
 # Completed
 
 # Reminders
+- s1-12 skip style anlattigi icin belki sonra geri donersin
 
 >> Comment Nomenclature
 - <prefix> ==== Title
