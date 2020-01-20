@@ -6,10 +6,12 @@ Study repository for electron framework
 - cd <projectdir> > npm start
 
 # Install 
-- Visual Studio Code [Text Editor]
-- npm init
-- npm install --save electron
+Visual Studio Code                                                      `# devEnvironment`
+- npm init                                                              `# node project`
+npm install --save electron                                             `# main framework`
 npm install --save-dev nodemon ## if npm global not working             `# Development Ease of use`  
+npm i --save sqlite3                                                    `# database [opt]` 
+npm i --save knex                                                       `# sql query builder [opt]`
 
 # Libraries
 - Bootstrap

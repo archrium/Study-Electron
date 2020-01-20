@@ -26,6 +26,10 @@ app.on('ready', () =>
         })
     );
 
+    mainWindow.once('ready-to-show', () => {
+        mainWindow.show();
+    });
+
     console.log('I am ready!');
     // ==== Create menu
     const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);

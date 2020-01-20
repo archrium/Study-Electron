@@ -1,5 +1,6 @@
 # Where I left
-https://youtu.be/Q9RyoNi4UXI?list=PL_f2F0Oyaj48jgl98pHuoyxoTgi7gXJ-z
+https://www.youtube.com/watch?v=c76FTxLRwAw
+sqlite3 database kurulumu 
 nodemon --watch * --exec "electron ."
 
 # Todo
@@ -34,6 +35,10 @@ https://www.youtube.com/watch?v=c76FTxLRwAw
 >> Links
 electron security
 https://github.com/electron/electron/blob/master/docs/tutorial/security.md
+file tree
+https://stackoverflow.com/questions/19699059/representing-directory-file-structure-in-markdown-syntax
+file tree 2
+https://softwareengineering.stackexchange.com/questions/118640/write-a-directory-structure-pseudo-code
 
 >> Javascript
 `console.log(process.platform)` platform bilgisi
@@ -43,3 +48,14 @@ https://github.com/electron/electron/blob/master/docs/tutorial/security.md
 `webContents` backend to frontend   
 
 >> Assume Unchanged
+
+# File Structure
+.
++-- package.json
++-- package-lock.json
++-- main.js
++-- domain
++-- renderer
+|   +-- html
+|   +-- scripts
+|   +-- style
