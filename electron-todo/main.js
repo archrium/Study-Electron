@@ -20,7 +20,7 @@ app.on('ready', () =>
     // ==== Create main window
     mainWindow.loadURL(
         url.format({
-            pathname: path.join(__dirname, "assets/view-html/index.html"),
+            pathname: path.join(__dirname, "renderer/html/index.html"),
             protocol: "file:",
             slashes: true
         })
@@ -134,7 +134,7 @@ function createFrame()
     });
 
     addWindow.loadURL(url.format({
-        pathname: path.join(__dirname, "assets/view-html/newTodo.html"),
+        pathname: path.join(__dirname, "renderer/html/newTodo.html"),
         protocol: "file:",
         slashes: true
     }));
