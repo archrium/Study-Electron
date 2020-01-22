@@ -1,5 +1,19 @@
 const { ipcRenderer } = require('electron');
 
+document.addEventListener('DOMContentLoaded', () =>
+{
+    ipcRenderer.send('mainWindowLoaded');
+    ipcRenderer.on('test', (err, data) =>
+    {
+        let container = document.querySelector('.nihil');
+        for (var i = 0; i < data.length; ++i)
+        {
+            container.innerHTML += "test: " + data[i].description.toString() + "<br>";
+
+        }
+    });
+});
+
 checkTodoCount();
 
 const inputNewTodo = document.querySelector("#inputNewTodo");

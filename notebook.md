@@ -20,6 +20,7 @@ nodemon --watch * --exec "electron ."
 # Reminders
 - s1-12 skip style anlattigi icin belki sonra geri donersin
 - embedded database - it does not require server to communicate with db
+- dom = document object
 
 >> Comment Nomenclature
 - <prefix> ==== Title
@@ -85,4 +86,4 @@ create table <tableName> (<colName> <dataType> <param>, ..); `create a table` ex
 .tables
 INSERT into <tableName> (id, name) VALUES (0, "Bob");
 select * from <tableName>;
-drop table <tableName>
+drop table <tableName>;

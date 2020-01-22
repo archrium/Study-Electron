@@ -10,8 +10,9 @@ Visual Studio Code                                                      `# devEn
 - npm init                                                              `# node project`
 npm install --save electron                                             `# main framework`
 npm install --save-dev nodemon ## if npm global not working             `# Development Ease of use`  
-npm i --save sqlite3                                                    `# database [opt]` 
-npm i --save knex                                                       `# sql query builder [opt]`
+npm install sqlite3 --save                                              `# database [opt]` 
+npm install knex --save                                                 `# sql query builder [opt]`
+npm install electron-rebuild --save-dev                                 `# electron rebuilder [opt]`             
 
 # Libraries
 - Bootstrap

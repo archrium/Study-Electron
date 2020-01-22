@@ -5,6 +5,17 @@ const path = require("path");
 
 const { app, BrowserWindow, Menu, ipcMain } = electron;
 
+// Addition
+
+var knex = require('knex')({
+    client: 'sqlite3',
+    connection: {
+        filename: "database/todo.sqlite"
+    }
+});
+
+// Addition end
+
 let mainWindow, addWindow;
 let todoList = [];
 
@@ -26,8 +37,19 @@ app.on('ready', () =>
         })
     );
 
-    mainWindow.once('ready-to-show', () => {
+    mainWindow.once('ready-to-show', () =>
+    {
         mainWindow.show();
+    });
+
+    // Pull data from Database
+    ipcMain.on('mainWindowLoaded', () =>
+    {
+        let data = knex.select().from("todos");
+        data.then((pull) =>
+        {
+            mainWindow.webContents.send('test', pull);
+        });
     });
 
     console.log('I am ready!');
