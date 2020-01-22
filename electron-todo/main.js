@@ -76,7 +76,7 @@ app.on('ready', () =>
         {
             var todo = {
                 id: todoList.length + 1,
-                content: data.todoValue
+                description: data.todoValue
             }
             todoList.push(todo);
         }
