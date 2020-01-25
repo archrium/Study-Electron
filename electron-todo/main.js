@@ -3,11 +3,14 @@ const url = require("url");
 const path = require("path");
 const { knex } = require('./modules/knex.js');
 
-const { app, BrowserWindow, Menu, ipcMain } = electron;
-
+const { app, BrowserWindow, Menu, ipcMain, dialog } = electron;
 
 let mainWindow, addWindow;
-let todoList = [];
+// !! not used
+let confirmButton  = {
+    buttons: ["Yes", "Cancel"],
+    message: "Do you confirm your action?"
+   };
 
 app.on('ready', () =>
 {
@@ -32,7 +35,11 @@ app.on('ready', () =>
         mainWindow.show();
     });
 
-    // Pull data from Database
+    // ==== Create menu
+    const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
+    Menu.setApplicationMenu(mainMenu);
+
+    // >> retrieve todo / Pull data from Database
     ipcMain.on('mainWindowLoaded', () =>
     {
         getData().then((pull) =>
@@ -43,11 +50,7 @@ app.on('ready', () =>
 
     console.log('I am ready!');
 
-    // ==== Create menu
-    const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
-    Menu.setApplicationMenu(mainMenu);
-
-    // >> new todo input
+    // >> create todo
     ipcMain.on("g:newTodo", (err, input) =>
     {
         if (input)
@@ -68,21 +71,37 @@ app.on('ready', () =>
                     }
                     if (!exists)
                     {
-                        id = ii+1;
+                        id = ii + 1;
                     }
                 }
 
                 knex('todos')
-                .insert({ id: id, description: input.todoValue })
-                .catch(() => { });
+                    .insert({ id: id, description: input.todoValue })
+                    .catch((err) => { });
+
+                knex('todos')
+                    .where({ id: id })
+                    .then((item) =>
+                    {
+                        mainWindow.webContents.send("main:addItem", item[0]);
+                    });
             });
         }
-        mainWindow.webContents.send("main:addItem", 'test');
+
         if (input.ref == "other")
         {
             addWindow.close();
             addWindow = null;
         }
+    });
+
+    // >> delete todo
+    ipcMain.on('index:deleteTodo', (err, id) => 
+    {
+        knex('todos')
+            .where({ id: id })
+            .del()
+            .catch((err) => { });
     });
 
     // >> close window

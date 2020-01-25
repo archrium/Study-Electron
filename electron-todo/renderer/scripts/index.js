@@ -1,4 +1,4 @@
-const { ipcRenderer } = require('electron');
+const { ipcRenderer, remote } = require('electron');
 
 document.addEventListener('DOMContentLoaded', () =>
 {
@@ -46,7 +46,6 @@ function checkTodoCount()
 
     if (container.children.length > 1)
     {
-        console.log(container.children.length);
         nihil.style.display = "none";
     } else
     {
@@ -57,43 +56,42 @@ function checkTodoCount()
 
 function insertTodoRenderer(todoItem)
 {
-        // Container
-        let container = document.querySelector(".todo-container");
+    // Container
+    let container = document.querySelector(".todo-container");
 
-        // Row
-        let row = document.createElement("div");
-        row.className = "row";
-    
-        // col
-        let col = document.createElement("div");
-        col.className = "todo-item p-2 mb-3 text-light bg-dark col-md-8 offset-2 shadow card d-flex justify-content-center flex-row align-items-center";
-        col.style = 'background: #582e48!important';
-    
-        // p 
-        let p = document.createElement("p");
-        p.className = "m-0 w-100";
-        p.innerText = todoItem.description;
-    
-        // btnDelete
-        let btnDelete = document.createElement("button");
-        btnDelete.className = "btn btn-sm btn-outline-danger flex-shrink-1";
-        btnDelete.innerText = "X"; //&#x2715;
-    
-        btnDelete.addEventListener('click', (element) =>
-        {
-            if (confirm("Do you confirm to delete?"))
-            {
-                // ipcRenderer.send('index:deleteTodo');
-                element.target.parentNode.parentNode.remove();
-                checkTodoCount();
-            }
-        });
-    
-        // Build
-        col.appendChild(p);
-        col.appendChild(btnDelete);
-        row.appendChild(col);
-        container.appendChild(row);
+    // Row
+    let row = document.createElement("div");
+    row.className = "row";
+
+    // col
+    let col = document.createElement("div");
+    col.className = "todo-item p-2 mb-3 text-light bg-dark col-md-8 offset-2 shadow card d-flex justify-content-center flex-row align-items-center";
+    col.style = 'background: #582e48!important';
+
+    // p 
+    let p = document.createElement("p");
+    p.className = "m-0 w-100";
+    p.innerText = todoItem.description;
+
+    // btnDelete
+    let btnDelete = document.createElement("button");
+    btnDelete.className = "btn btn-sm btn-outline-danger flex-shrink-1";
+    btnDelete.innerText = "X"; //&#x2715;
+    btnDelete.setAttribute('data-id', todoItem.id);
+
+    btnDelete.addEventListener('click', (element) =>
+    {
+        // !! burasi icin confirm islemi yap
+        ipcRenderer.send('index:deleteTodo', element.target.getAttribute('data-id'));
+        element.target.parentNode.parentNode.remove();
+        checkTodoCount();
+    });
+
+    // Build
+    col.appendChild(p);
+    col.appendChild(btnDelete);
+    row.appendChild(col);
+    container.appendChild(row);
 }
 
 function addTodo() 

@@ -7,19 +7,24 @@ D:\Repository\GitHub\Study-Todo-Electron\electron-todo\database
 # Todo
 - openCss adinda bir template cikarabilirsin 
 - vsc formatlamaya bak
-- create operation -> database record
 - knexi protected variations
+- architecture icin naming convention olustur
+- delete confirm
+- paketleme
 
 # Problems
 - insecure content-security-policy ts 179 bi ara coz
 
 # Completed
 - Download db browser
+- create operation -> database record
 
 # Reminders
 - s1-12 skip style anlattigi icin belki sonra geri donersin
 - embedded database - it does not require server to communicate with db
 - dom = document object
+electron-packager . TodoApp --overwrite --platform=win32 --arch=ia32 --icon=renderer/icons/app.ico --prune=true --out=release-builds
+electron-packager <sourcedir> <appname> --platform=<platform> --arch=<arch> [optional flags...]
 
 >> Comment Nomenclature
 - <prefix> ==== Title

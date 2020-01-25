@@ -13,6 +13,8 @@ npm install sqlite3 --save                                              `# datab
 npm install knex --save                                                 `# sql query builder [opt]`
 npm install electron-rebuild --save-dev                                 `# electron rebuilder [opt]`     
 npm install nodemon --save-dev                                          `# Development Ease of use ## if npm global not working `        
+npm install electron-packager --save-dev                                `# executable-maker`
+npm install electron-packager -g                                        `# global`
 
 # Libraries
 - Bootstrap
