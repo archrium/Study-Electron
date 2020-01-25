@@ -1,21 +1,20 @@
 # Where I left
 https://www.youtube.com/watch?v=c76FTxLRwAw
-sqlite3 database kurulumu 
 nodemon --watch * --exec "electron ."
+D:\Repository\GitHub\Study-Todo-Electron\electron-todo\database
+- retrieve etmeye calisiyorsun
 
 # Todo
 - openCss adinda bir template cikarabilirsin 
 - vsc formatlamaya bak
-- npm i --save knex
-- npm i --save sqlite3
-- npm i --save-dev electron-rebuild
-- npm rebuild
-- Download db browser
+- create operation -> database record
+- knexi protected variations
 
 # Problems
 - insecure content-security-policy ts 179 bi ara coz
 
 # Completed
+- Download db browser
 
 # Reminders
 - s1-12 skip style anlattigi icin belki sonra geri donersin
@@ -49,6 +48,8 @@ file tree 2
 https://softwareengineering.stackexchange.com/questions/118640/write-a-directory-structure-pseudo-code
 sqlite3 on windows 10
 https://www.youtube.com/watch?v=yhobT_u9QPU
+knex into database
+https://stackoverflow.com/questions/28928122/knex-nodejs-and-inserting-into-the-database
 
 >> Javascript
 `console.log(process.platform)` platform bilgisi

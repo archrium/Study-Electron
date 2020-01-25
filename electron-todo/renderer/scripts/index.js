@@ -5,10 +5,9 @@ document.addEventListener('DOMContentLoaded', () =>
     ipcRenderer.send('mainWindowLoaded');
     ipcRenderer.on('test', (err, data) =>
     {
-        let container = document.querySelector('.nihil');
         for (var i = 0; i < data.length; ++i)
         {
-            insertTodo(data[i]);
+            insertTodoRenderer(data[i]);
         }
         checkTodoCount();
     });
@@ -33,7 +32,7 @@ document.querySelector("#btnNewTodo").addEventListener('click', () =>
 
 ipcRenderer.on('main:addItem', (err, todoItems) =>
 {
-    insertTodo(todoItems);
+    insertTodoRenderer(todoItems);
     checkTodoCount();
 });
 
@@ -56,7 +55,7 @@ function checkTodoCount()
 
 }
 
-function insertTodo(todoItem)
+function insertTodoRenderer(todoItem)
 {
         // Container
         let container = document.querySelector(".todo-container");
@@ -84,6 +83,7 @@ function insertTodo(todoItem)
         {
             if (confirm("Do you confirm to delete?"))
             {
+                // ipcRenderer.send('index:deleteTodo');
                 element.target.parentNode.parentNode.remove();
                 checkTodoCount();
             }

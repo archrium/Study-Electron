@@ -1,20 +1,10 @@
 const electron = require("electron");
 const url = require("url");
 const path = require("path");
-// const { db } = require('./lib/connection');
+const { knex } = require('./modules/knex.js');
 
 const { app, BrowserWindow, Menu, ipcMain } = electron;
 
-// Addition
-
-var knex = require('knex')({
-    client: 'sqlite3',
-    connection: {
-        filename: "database/todo.sqlite"
-    }
-});
-
-// Addition end
 
 let mainWindow, addWindow;
 let todoList = [];
@@ -45,55 +35,64 @@ app.on('ready', () =>
     // Pull data from Database
     ipcMain.on('mainWindowLoaded', () =>
     {
-        let data = knex.select().from("todos");
-        data.then((pull) =>
+        getData().then((pull) =>
         {
             mainWindow.webContents.send('test', pull);
         });
     });
 
     console.log('I am ready!');
+
     // ==== Create menu
     const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
     Menu.setApplicationMenu(mainMenu);
 
-    // >> Input test
-    ipcMain.on("key:inputValue", (err, data) =>
+    // >> new todo input
+    ipcMain.on("g:newTodo", (err, input) =>
     {
-        console.log(data);
-    });
-
-    // >> New Window
-    ipcMain.on("key:newFrame", (err) =>
-    {
-        createFrame();
-    });
-
-    // >> Yeni pencere kapat
-    ipcMain.on("g:newTodo", (err, data) =>
-    {
-        if (data)
+        if (input)
         {
-            var todo = {
-                id: todoList.length + 1,
-                description: data.todoValue
-            }
-            todoList.push(todo);
+            getData().then((pull) =>
+            {
+                var id = pull.length + 1;
+                for (var ii = 0; ii < pull.length; ii++) 
+                {
+                    let exists = false;
+                    for (var yy = 1; yy <= pull.length; yy++) 
+                    {
+                        if (pull[ii].id == yy)
+                        {
+                            exists = true;
+                            break;
+                        }
+                    }
+                    if (!exists)
+                    {
+                        id = ii+1;
+                    }
+                }
+
+                knex('todos')
+                .insert({ id: id, description: input.todoValue })
+                .catch(() => { });
+            });
         }
-        mainWindow.webContents.send("main:addItem", todo);
-        if (data.ref == "other")
+        mainWindow.webContents.send("main:addItem", 'test');
+        if (input.ref == "other")
         {
             addWindow.close();
             addWindow = null;
         }
     });
 
+    // >> close window
     ipcMain.on("newTodo:btnClose", () =>
     {
         addWindow.close();
         addWindow = null;
     });
 
+    // >> app quit
     mainWindow.on("close", () =>
     {
         app.quit();
@@ -134,6 +133,7 @@ if (process.platform == "darwin")
 
 }
 
+// >> gelistirme modunda degilsen devtools gosterme
 if (process.env.NODE_ENV !== "production")
 {
     mainMenuTemplate.push({
@@ -145,6 +145,7 @@ if (process.env.NODE_ENV !== "production")
     })
 }
 
+// ==== Command Functions
 function createFrame()
 {
     addWindow = new BrowserWindow({
@@ -167,9 +168,8 @@ function createFrame()
     })
 }
 
-
 // ==== Query Functions
-function getTodoList()
+function getData()
 {
-    return todoList;
+    return knex.select().from("todos");
 }
