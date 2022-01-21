@@ -1,6 +1,6 @@
 # Study-Todo-Electron
-`Project started at 2019-Dec-26`
-Study repository for electron framework
+`Started 26-Dec-2019`  
+Study repository for electron framework  
 
 # Initialization
 - cd <projectdir> > npm start
@@ -21,11 +21,11 @@ npm install electron-packager -g                                        `# globa
 - Pure.css
 - Primer.css
 
-# Linking
-Pure.css Library
-https://purecss.io/
-Bootstrap
-https://getbootstrap.com/
-Primer
-https://primer.style/css/getting-started
+# Links
+- Pure.css Library
+    https://purecss.io/
+- Bootstrap
+    https://getbootstrap.com/
+- Primer
+    https://primer.style/css/getting-started
 
