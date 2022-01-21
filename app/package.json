@@ -1,0 +1,19 @@
+{
+  "name": "recall",
+  "version": "1.0.0",
+  "description": "academic reference organizer",
+  "main": "main.js",
+  "scripts": {
+    "test": "test",
+    "start": "electron ."
+  },
+  "keywords": [
+    "reference",
+    "organize"
+  ],
+  "author": "Kutay Coskuner",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^16.0.7"
+  }
+}
