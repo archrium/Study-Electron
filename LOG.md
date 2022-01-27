@@ -22,6 +22,7 @@
 # Problems
 
 # Log 
+- 27-01-2022 0.12 add: distribution build through electron-forge
 - 21-01-2022 0.11 add: electron project quickstart frame
 - 21-01-2022 0.10 org: electron gitignore; log, notebook, timelog, old
 

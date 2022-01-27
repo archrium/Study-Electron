@@ -22,3 +22,8 @@
     - npm init
     - npm install --save-dev electron
     - add start script with electron . 
+
+- <packaging and dist through electron forge>
+    - npm install --save-dev @electron-forge/cli
+    - npx electron-forge import
+    - npm run make
