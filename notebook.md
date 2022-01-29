@@ -6,15 +6,20 @@
     https://www.electronjs.org/
 - quickstart
     https://www.electronjs.org/docs/latest/tutorial/quick-start
-- primer style
-    https://primer.style/css/getting-started
+- styling
+    - primer
+        https://primer.style/css/getting-started
+    - Pure.css Library
+        https://purecss.io/
+    - Bootstrap
+        https://getbootstrap.com/
 
 # Keywords
 - css kit, libraries for electron
 
 # Information
 - some projects with electron: github desktop, vsc, discord?
-- some styling alternatives: photon css, semantic ui, primer
+- some styling alternatives: photon css, semantic ui, primer, pure.css, bootstrap
 
 # Theory
 - <what is package-lock.json>
@@ -62,3 +67,16 @@
         +-- styles                  | css files
             +-- primer.css              | css framework by github
             +-- styles.css              | own styles
+
++-- app (todo-old)
+    +-- assets
+    +-- database
+        +-- todo.sqlite
+    +-- modules
+        +-- connection.js
+        +-- knex.js
+    +-- renderer
+        +-- html
+        +-- scripts
+        +-- style
+    +-- main.js

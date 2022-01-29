@@ -18,14 +18,16 @@
 - mix: multiple additions
 
 # Todo
+- create basic layout for the application 
 
 # Problems
 
 # Log 
-- 28-01-2022 0.14 add: light/dark mode test/tutorial
-- 28-01-2022 0.14 arch: styling primer css 
-- 28-01-2022 0.13 add: file structure | architecture test
-- 27-01-2022 0.12 add: distribution build through electron-forge
-- 21-01-2022 0.11 add: electron project quickstart frame
-- 21-01-2022 0.10 org: electron gitignore; log, notebook, timelog, old
+- 29-01-2022 0.14.1     org: delete stale branches; copy old application structures; added todo;
+- 28-01-2022 0.14 add: light/dark mode test/tutorial  
+- 28-01-2022 0.14 arch: styling primer css  
+- 28-01-2022 0.13 add: file structure | architecture test  
+- 27-01-2022 0.12 add: distribution build through electron-forge   
+- 21-01-2022 0.11 add: electron project quickstart frame  
+- 21-01-2022 0.10 org: electron gitignore; log, notebook, timelog, old  
 
