@@ -10,8 +10,8 @@ function createWindow () {
     }
   })
 
-  win.loadFile('src/pages/index.html')
-  // test
+  win.loadFile('test/index.html')
+
   ipcMain.handle('dark-mode:toggle', () => {
     if (nativeTheme.shouldUseDarkColors) {
       nativeTheme.themeSource = 'light'
@@ -24,7 +24,6 @@ function createWindow () {
   ipcMain.handle('dark-mode:system', () => {
     nativeTheme.themeSource = 'system'
   })
-  // test end
 }
 
 app.whenReady().then(() => {

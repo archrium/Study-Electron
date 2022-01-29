@@ -22,6 +22,8 @@
 # Problems
 
 # Log 
+- 28-01-2022 0.14 add: light/dark mode test/tutorial
+- 28-01-2022 0.14 arch: styling primer css 
 - 28-01-2022 0.13 add: file structure | architecture test
 - 27-01-2022 0.12 add: distribution build through electron-forge
 - 21-01-2022 0.11 add: electron project quickstart frame
