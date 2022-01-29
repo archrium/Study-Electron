@@ -27,3 +27,16 @@
     - npm install --save-dev @electron-forge/cli
     - npx electron-forge import
     - npm run make
+
+# Structure
++-- app
+    +-- package.json                | dependencies, scripts, entry point
+    +-- package-lock.json           | ??                  
+    +-- src
+        +-- components              | such as vue mixed comps of html, css, js
+        +-- pages                   | html
+        +-- resources               | images, icons, pdfs etc.
+        +-- scripts                 | javascript <main.js entry point here>
+            +-- main.js                 | entry point
+            +-- preload.js     
+        +-- styles                  | css files
