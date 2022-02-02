@@ -28,6 +28,7 @@
 # Problems
 
 # Log 
+- 02-02-2022 0.15.2     chg: notebook case change 2
 - 02-02-2022 0.15.1     chg: notebook case change 1
 - 02-02-2022 0.15       add: keyboard shortcuts; layout test
 - 02-02-2022 0.15       arch: asset ayrildi, pages html olarak degistrildi.
