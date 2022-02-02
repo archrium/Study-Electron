@@ -28,8 +28,9 @@
 # Problems
 
 # Log 
-- 02-02-2022 0.15 add: keyboard shortcuts; layout test
-- 02-02-2022 0.15 arch: asset ayrildi, pages html olarak degistrildi.
+- 02-02-2022 0.15.1     chg: notebook case change 1
+- 02-02-2022 0.15       add: keyboard shortcuts; layout test
+- 02-02-2022 0.15       arch: asset ayrildi, pages html olarak degistrildi.
 - 29-01-2022 0.14.1     org: delete stale branches; copy old application structures; added todo;
 - 28-01-2022 0.14 add: light/dark mode test/tutorial  
 - 28-01-2022 0.14 arch: styling primer css  
