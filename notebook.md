@@ -25,6 +25,8 @@
 - <what is package-lock.json>
     Package-lock is a large list of each dependency listed in your package.json
 
+- <what is renderer>
+
 - <what is pagination>
     Pagination, also known as paging, is the process of dividing a document into discrete pages, either electronic pages or printed pages
 
@@ -55,11 +57,12 @@
 # Structure
 +-- app
     +-- package.json                | dependencies, scripts, entry point
-    +-- package-lock.json           | ??                  
+    +-- package-lock.json           | ??            
+    +-- out                         | distribution
+    +-- resources                   | images, icons, pdfs etc.      
     +-- src
         +-- components              | such as vue mixed comps of html, css, js
-        +-- pages                   | html
-        +-- resources               | images, icons, pdfs etc.
+        +-- html                    | html
         +-- scripts                 | javascript <main.js entry point here>
             +-- main.js                 | entry point
             +-- preload.js              | ??
@@ -67,6 +70,7 @@
         +-- styles                  | css files
             +-- primer.css              | css framework by github
             +-- styles.css              | own styles
+    +-- test                        | test
 
 +-- app (todo-old)
     +-- assets

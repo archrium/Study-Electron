@@ -18,11 +18,18 @@
 - mix: multiple additions
 
 # Todo
-- create basic layout for the application 
+- [x] 02-02-2022 create basic layout for the application 
+- add: borderless window
+- add: custom title bar
+- add: database interaction crud
+- read and write json
+
 
 # Problems
 
 # Log 
+- 02-02-2022 0.15 add: keyboard shortcuts; layout test
+- 02-02-2022 0.15 arch: asset ayrildi, pages html olarak degistrildi.
 - 29-01-2022 0.14.1     org: delete stale branches; copy old application structures; added todo;
 - 28-01-2022 0.14 add: light/dark mode test/tutorial  
 - 28-01-2022 0.14 arch: styling primer css  
