@@ -14,6 +14,9 @@
     - Bootstrap
         https://getbootstrap.com/
 
+# VSC Addons
+- css formatter by martin aeschlimann
+
 # Keywords
 - css kit, libraries for electron
 

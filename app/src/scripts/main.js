@@ -6,7 +6,19 @@ function createWindow() {
   const win = new BrowserWindow({
     width: 1280,
     height: 720,
+    // :: frameless
+    frame: false,
+    titleBarStyle: 'hidden',
+    titleBarOverlay: {
+      color: '#202020',
+      symbolColor: '#ccc'
+    },
+    transparent: true,
+    // :: frameless end
     webPreferences: {
+      nodeIntegration: true,
+      contextIsolation: true,
+      devTools: true,
       preload: path.join(__dirname, 'preload.js')
     }
   })
