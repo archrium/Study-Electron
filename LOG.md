@@ -21,13 +21,15 @@
 - [x] 02-02-2022 create basic layout for the application 
 - [x] 04-02-2022 add: borderless window
 - [x] 04-02-2022 add: custom title bar
-- add: database interaction crud
-- read and write json
+- [x] 05-02-2022 write file test
+- titlebar with icon and info
+- add: select and implement database
 
 
 # Problems
 
 # Log 
+- 05-02-2022 0.17       add: white basic file test
 - 04-02-2022 0.16       add: custom title bar with close, minimize, expand and drag functions;
 - 02-02-2022 0.15.2     chg: notebook case change 2
 - 02-02-2022 0.15.1     chg: notebook case change 1

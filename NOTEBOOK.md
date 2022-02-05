@@ -14,8 +14,9 @@
     - Bootstrap
         https://getbootstrap.com/
 
-# VSC Addons
-- css formatter by martin aeschlimann
+# Architecture
+- framework: electronjs
+- database: nosql | [casssandra], mongodb?
 
 # Keywords
 - css kit, libraries for electron
@@ -32,6 +33,10 @@
 
 - <what is pagination>
     Pagination, also known as paging, is the process of dividing a document into discrete pages, either electronic pages or printed pages
+
+- <difference between sql and nosql>
+    - database management system 
+        - structured data | semi-structured data | unstructural data
 
 # How to?
 - <start to work>
@@ -61,6 +66,7 @@
 +-- app
     +-- package.json                | dependencies, scripts, entry point
     +-- package-lock.json           | ??            
+    +-- data                        | databases
     +-- out                         | distribution
     +-- resources                   | images, icons, pdfs etc.      
     +-- src
